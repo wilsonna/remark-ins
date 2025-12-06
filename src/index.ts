@@ -46,10 +46,10 @@ declare module "mdast" {
 export const REGEX = /\+\+(?![\s+])([\s\S]*?)(?<![\s+])\+\+/;
 export const REGEX_GLOBAL = /\+\+(?![ +])([\s\S]*?)(?<![\s+])\+\+/g;
 
-export const REGEX_STARTING = /\+\+(?![\s]|\++\s)/;
-export const REGEX_STARTING_GLOBAL = /\+\+(?![ ]|\++\s)/g;
+export const REGEX_STARTING = /\+\+(?! |(\++\s))/;
+export const REGEX_STARTING_GLOBAL = /\+\+(?! |(\++\s))/g;
 
-export const REGEX_ENDING = /(?<!\s|\s\+|\s\+|\s\+|\s\+)\+\+/;
+export const REGEX_ENDING = /(?<! |(\s\+))\+\+/;
 export const REGEX_ENDING_GLOBAL = /(?<! |(\s\+))\+\+/g;
 
 export const REGEX_EMPTY = /\+\+\s*\+\+/;

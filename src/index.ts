@@ -98,7 +98,7 @@ export const plugin: Plugin<void[], Root> = () => {
 
     if (!REGEX.test(node.value)) return;
 
-    console.log("visitor 1");
+    console.log("visitor 1: " + node.value);
 
     const children: Array<PhrasingContent> = [];
     const value = node.value;
@@ -163,7 +163,7 @@ export const plugin: Plugin<void[], Root> = () => {
     // control if the Text node matches with "starting ins regex"
     if (!REGEX_STARTING.test(node.value)) return;
 
-    console.log("visitor 2");
+    console.log("visitor 2: " + node.value);
 
     const openingNode = node;
 
@@ -253,7 +253,7 @@ export const plugin: Plugin<void[], Root> = () => {
 
     if (!REGEX_EMPTY.test(node.value)) return;
 
-    console.log("visitor 3");
+    console.log("visitor 3: " + node.value);
 
     const children: Array<PhrasingContent> = [];
     const value = node.value;

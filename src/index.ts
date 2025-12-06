@@ -43,8 +43,8 @@ declare module "mdast" {
 // the new regex is strict!
 // it doesn't allow a space after the first double equity sign
 // it doesn't allow a space before the last double equity sign
-export const REGEX = /\+\+(?![\s+])([\s\S]*?)(?<![\s+])\+\+/;
-export const REGEX_GLOBAL = /\+\+(?![ +])([\s\S]*?)(?<![\s+])\+\+/g;
+export const REGEX = /\+\+(?! )([\s\S]*?)(?<! )\+\+/;
+export const REGEX_GLOBAL = /\+\+(?! )([\s\S]*?)(?<! )\+\+/g;
 
 export const REGEX_STARTING = /\+\+(?! |(\++\s))/;
 export const REGEX_STARTING_GLOBAL = /\+\+(?! |(\++\s))/g;

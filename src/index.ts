@@ -169,6 +169,7 @@ export const plugin: Plugin<void[], Root> = () => {
 
     // control if any next child Text node of the parent has "ending ins regex"
     const closingNode = findAfter(parent, openingNode, function (node) {
+      console.log("visitor 2 find nodes: " + node.type + ", " + node.value);
       return node.type === "text" && REGEX_ENDING.test((node as Text).value);
     });
 

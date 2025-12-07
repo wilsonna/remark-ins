@@ -163,7 +163,7 @@ export const plugin: Plugin<void[], Root> = () => {
     // control if the Text node matches with "starting ins regex"
     if (!REGEX_STARTING.test(node.value)) return;
 
-    console.log("visitor 2: " + node.value);
+    console.log("visitor 2 open: " + node.value);
 
     const openingNode = node;
 
@@ -173,6 +173,7 @@ export const plugin: Plugin<void[], Root> = () => {
     });
 
     if (!closingNode) return;
+    console.log("visitor 2 close");
 
     // now, ensured that the parent has a ins element between opening Text node and closing Text nodes
 
